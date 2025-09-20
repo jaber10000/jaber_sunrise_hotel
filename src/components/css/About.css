@@ -1,0 +1,198 @@
+/* About Section - Full Width Premium Design */
+.about {
+  /* min-width: 100%; */
+  /* min-height: 100vh; */
+  padding: 6rem 3rem;
+  background: linear-gradient(135deg, #fffaf0 0%, #f4f4f4 100%);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.about h2 {
+  font-size: 3rem;
+  margin-bottom: 1.2rem;
+  color: #000000;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.about p {
+  max-width: 950px;
+  margin: 0 auto 4rem auto;
+  color: rgba(0, 0, 0, 0.9);
+  font-size: 1.2rem;
+  line-height: 1.8;
+}
+
+/* Cards Grid */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+  width: 100%;
+  /* max-width: 1750px; */
+}
+
+/* Glassmorphism Card */
+.cards .card {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+  text-align: left;
+  color: #000000;
+}
+
+.cards .card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.cards .card:nth-child(1) {
+  animation-delay: 0.3s;
+}
+
+.cards .card:nth-child(2) {
+  animation-delay: 0.6s;
+}
+
+.cards .card:nth-child(3) {
+  animation-delay: 0.9s;
+}
+
+.cards .card:hover img {
+  transform: scale(1.1);
+}
+
+
+.cards .card:hover {
+  transform: translateY(-12px) scale(1.03);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.cards .card h3 {
+  font-size: 1.5rem;
+  margin: 1.2rem 1rem 0.5rem;
+  font-weight: 600;
+}
+
+.cards .card p {
+  margin: 0 1rem 1.2rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: rgba(0, 0, 0, 0.85);
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUp {
+  from {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.location-icon {
+  color: #e63946;
+  margin-right: 6px;
+}
+
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 14px;
+  max-width: 800px;
+  width: 90%;
+  text-align: center;
+  position: relative;
+  animation: fadeIn 0.6s ease;
+}
+
+.modal-content img {
+  width: 100%;
+  max-height: 350px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+.modal-content h2 {
+  font-size: 1.8rem;
+  margin-bottom: 0.8rem;
+}
+
+.modal-content .cost {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #0077b6;
+  margin: 0.5rem 0;
+}
+
+.modal-content .details {
+  font-size: 1rem;
+  color: #444;
+  line-height: 1.6;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  font-size: 1.8rem;
+  border: none;
+  background: none;
+  cursor: pointer;
+  color: #333;
+}
+
+.close-btn:hover {
+  color: red;
+}
